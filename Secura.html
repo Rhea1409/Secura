@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secura - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #000428, #004e92, #8e2de2, #ff416c);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff7eb9;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      text-align: center;
+      padding: 2rem;
+      background-image: url('/mnt/data/8f36ad78-36e0-40a8-a03b-cdcb8b2afe2e.png');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      max-width: 700px;
+    }
+
+    .cta-button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      background-color: #ff416c;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      background-color: #ff6a88;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .founders {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .founders div {
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+    }
+
+    /* Product Section */
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 800px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+
+    .product-card h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      margin: 0.4rem 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .product-card ul {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+
+    .product-card ul li {
+      list-style-type: '✅ ';
+      margin-bottom: 0.5rem;
+    }
+
+    .product-colors {
+      margin-top: 0.5rem;
+    }
+
+    .product-colors span {
+      font-weight: bold;
+    }
+
+    .preorder-link {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background-color: #ff416c;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .preorder-link:hover {
+      background-color: #ff6a88;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">SECURA</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#how">How It Works</a>
+      <a href="#shop">Shop</a>
+      <a href="#products">Products</a>
+      <a href="#impact">Impact</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>SECURA</h1>
+    <p>Revolutionizing personal safety with bio-feedback driven AI wearables. Designed by young innovators. Powered by purpose.</p>
+    <a href="#products"><button class="cta-button">Buy Now</button></a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">Our Story</h2>
+    <p class="section-content">Born from empathy, SECURA was created by five passionate students determined to change how people protect themselves. When safety became a growing concern in our communities, we decided to respond with innovation rooted in care.</p>
+    <div class="founders">
+      <div>Anaisha Bhutani</div>
+      <div>Devangna Agrawal</div>
+      <div>Orhan Khan</div>
+      <div>Rhea Francis</div>
+      <div>Vedant Bahri</div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-content">SECURA's smart bracelet uses bio-feedback sensors to detect sudden spikes in stress, fear, or abnormal patterns. Once triggered, it silently sends real-time alerts to pre-selected contacts and nearby authorities, including live location and health vitals.</p>
+  </section>
+
+  <section id="shop">
+    <h2 class="section-title">Shop</h2>
+    <p class="section-content">Our first-gen SECURA bracelet is available for ₹2,500. Lightweight, sleek, and compatible with our app. Pre-order now to be among the first to own the future of safety.</p>
+    <a href="#products"><button class="cta-button">Pre-Order</button></a>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Our Products</h2>
+    <div class="products">
+
+      <div class="product-card">
+        <h3>🛡️ Shield Classic</h3>
+        <p><strong>Tagline:</strong> Essential protection for everyday safety</p>
+        <p><strong>Price:</strong> ₹2,500</p>
+        <p><strong>Target Audience:</strong> Students, working professionals, elderly</p>
+        <ul>
+          <li>Heart Rate & Blood Oxygen Monitoring (MAX30102)</li>
+          <li>Skin Conductivity Tracking (GSR sensor)</li>
+          <li>Movement Detection (MPU6050)</li>
+          <li>Manual Emergency Trigger (Optional button)</li>
+          <li>Real-time Location Tracking</li>
+          <li>Free Basic App Subscription</li>
+        </ul>
+        <p class="product-colors"><span>Colors:</span> Classic Black, Silver, Rose Gold | <strong>Engraving:</strong> ₹200 extra</p>
+        <a class="preorder-link" href="#contact">Pre-Order Shield Classic</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🔷 Shield Pro</h3>
+        <p><strong>Tagline:</strong> Advanced protection with premium features</p>
+        <p><strong>Price:</strong> ₹2,800</p>
+        <p><strong>Target Audience:</strong> Women, solo travelers, senior citizens, high-risk environments</p>
+        <ul>
+          <li>Enhanced Heart Rate Analytics (includes anomaly prediction)</li>
+          <li>Advanced GSR Sensitivity</li>
+          <li>AI-calibrated Fall Detection + Struggle Tracking</li>
+          <li>Priority Emergency Response Routing</li>
+          <li>Extended Battery (up to 48 hrs)</li>
+          <li>1-month Premium Subscription (with audio recording + auto-routing)</li>
+        </ul>
+        <p class="product-colors"><span>Colors:</span> Midnight Black, Platinum, Rose Gold, Ocean Blue | <strong>Engraving:</strong> Free</p>
+        <a class="preorder-link" href="#contact">Pre-Order Shield Pro</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="impact">
+    <h2 class="section-title">Impact</h2>
+    <p class="section-content">SECURA has been piloted across local schools and colleges, creating a culture of proactive safety and quick response. Our tech empowers users, protects communities, and opens conversations around modern safety in public spaces.</p>
+  </section>
+
+  <section id="faq">
+    <h2 class="section-title">FAQs</h2>
+    <p class="section-content">
+      <strong>Q: Who can use SECURA?</strong><br />A: Anyone — from school students to professionals.<br /><br />
+      <strong>Q: What if I accidentally trigger it?</strong><br />A: You have 1 minute to cancel the alert from the app.<br /><br />
+      <strong>Q: Is it waterproof?</strong><br />A: Yes, SECURA is waterproof and dust-resistant.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-content">For queries, collaborations, or bulk orders, write to us at <strong>contact@securawear.com</strong> or reach us via Instagram @securawear.</p>
+  </section>
+
+  <footer>© 2025 SECURA | Made by Anaisha, Devangna, Orhan, Rhea and Vedant</footer>
+</body>
+
+</html>
